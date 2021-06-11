@@ -1,39 +1,29 @@
 package com.bridgelabz.generics;
 
 public class MaximumOfThreeNumbers<T extends Comparable<T>> {
+	// Taking more than three values in the form of an array
+	T[] inputArray;
 
-	T x, y, z;
-
-	// Parameterised constructor
-	public MaximumOfThreeNumbers(T x, T y, T z) {
-		this.x = x;
-		this.y = y;
-		this.z = z;
+	
+	public MaximumOfThreeNumbers(T[] inputArray) {
+		this.inputArray = inputArray;
 	}
 
 	public T getMaximum() {
-		return MaximumOfThreeNumbers.getMaximum(x, y, z);
+		return MaximumOfThreeNumbers.getMaximum(inputArray);
 	}
 
-	public static <T extends Comparable<T>> T getMaximum(T x, T y, T z) {
-		T max = x; // assume x is initially the largest
+	// Determines the maximum element present in the inputArray
+	public static <T extends Comparable<T>> T getMaximum(T[] inputArray) {
 
-		if (y.compareTo(max) > 0) {
-			max = y; // y is the largest so far
+		T max = inputArray[0];
+
+		for (T element : inputArray) {			// store inputArray in element
+
+			if (element.compareTo(max) > 0)   //comparing each element with other element to check largest element
+
+				max = element; 
 		}
-
-		if (z.compareTo(max) > 0) {
-			max = z; // z is the largest
-		}
-		return max; // return the largest integer
-	}
-
-	public static void main(String[] args) {
-		System.out.printf("Maximum of %d, %d and %d is %d\n\n", 10, 3, 5, getMaximum(3, 5, 10));
-
-		System.out.printf("Maximum of %.1f, %.1f and %.1f is %.1f\n\n", 6.5, 2.3, 7.8, getMaximum(6.5, 2.3, 7.8));
-
-		System.out.printf("Maximum of %s, %s and %s is %s\n\n", "Apple", "Peach", "Banana",
-				getMaximum("Apple", "Peach", "Banana"));
+		return max;  // returning maximum element
 	}
 }
