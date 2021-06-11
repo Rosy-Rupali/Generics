@@ -20,7 +20,7 @@ public class Generics {
 
 		System.out.printf("Maximum of %d, %d and %d is %d\n\n", 10, 3, 5, maximum(3, 5, 10));
 
-		System.out.printf("Maximum of %.1f, %.1f and %.1f is %.2f\n\n", 6.5, 2.3, 7.8, maximum(6.5, 2.3, 7.8));
+		System.out.printf("Maximum of %.1f, %.1f and %.1f is %.1f\n\n", 6.5, 2.3, 7.8, maximum(6.5, 2.3, 7.8));
 
 		System.out.printf("Maximum of %s, %s and %s is %s\n\n", "Apple", "Peach", "Banana",
 				maximum("Apple", "Peach", "Banana"));
