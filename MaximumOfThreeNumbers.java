@@ -1,8 +1,21 @@
+/**************************************************
+ * Purpose :  It is a program to print the maximum using Generics
+ * @author Rosy Rupali
+ * @since 11-06-2021
+ * @version 1.0
+ *************************************************/
 package com.bridgelabz.generics;
 
 public class MaximumOfThreeNumbers {
 
 	// Determines the largest of three comparable String values
+	/**
+	 * @param <T>
+	 * @param x first argument of String
+	 * @param y second argument of String
+	 * @param z third argument of String
+	 * @return String which has maximum value
+	 */
 	public static <T extends Comparable<T>> T maximum(T x, T y, T z) {
 		T max = x; // assume x is initially the largest
 
