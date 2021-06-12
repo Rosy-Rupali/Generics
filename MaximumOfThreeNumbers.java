@@ -1,5 +1,5 @@
 /**************************************************
- * Purpose :  It is a program to print the JSON input file to Java String type
+ * Purpose :  It is a program to print the maximum using Generics
  * @author Rosy Rupali
  * @since 11-06-2021
  * @version 1.0
