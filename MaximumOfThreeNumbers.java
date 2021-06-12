@@ -1,10 +1,20 @@
+/**************************************************
+ * Purpose :  It is a program to print the maximum using Generics
+ * @author Rosy Rupali
+ * @since 11-06-2021
+ * @version 1.0
+ *************************************************/
 package com.bridgelabz.generics;
 
 public class MaximumOfThreeNumbers<T extends Comparable<T>> {
 
 	T x, y, z;
 
-	// Parameterised constructor
+	/**
+	 * @param x first argument
+	 * @param y second argument
+	 * @param z third argument
+	 */
 	public MaximumOfThreeNumbers(T x, T y, T z) {
 		this.x = x;
 		this.y = y;
@@ -15,6 +25,13 @@ public class MaximumOfThreeNumbers<T extends Comparable<T>> {
 		return MaximumOfThreeNumbers.getMaximum(x, y, z);
 	}
 
+	/**
+	 * @param <T>
+	 * @param x
+	 * @param y
+	 * @param z
+	 * @return maximum value among three arguments
+	 */
 	public static <T extends Comparable<T>> T getMaximum(T x, T y, T z) {
 		T max = x; // assume x is initially the largest
 
