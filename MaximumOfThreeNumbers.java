@@ -1,5 +1,5 @@
 /**************************************************
- * Purpose :  It is a program to print the JSON input file to Java String type
+ * Purpose :  It is a program to print the maximum using Generics
  * @author Rosy Rupali
  * @since 11-06-2021
  * @version 1.0
@@ -12,14 +12,19 @@ public class MaximumOfThreeNumbers<T extends Comparable<T>> {
 	T[] inputArray;
 
 	public MaximumOfThreeNumbers(T[] inputArray) {
-		this.inputArray = inputArray; // takes the array of elements
+		this.inputArray = inputArray;          
 	}
 
 	public T getMaximum() {
 		return MaximumOfThreeNumbers.getMaximum(inputArray);
 	}
 
-	// Determines the maximum element present in the inputArray
+	
+	/**
+	 * @param <T>
+	 * @param inputArray : takes the array of elements
+	 * @return maximum element present in the inputArray
+	 */
 	public static <T extends Comparable<T>> T getMaximum(T[] inputArray) {
 
 		T max = inputArray[0];
@@ -34,6 +39,11 @@ public class MaximumOfThreeNumbers<T extends Comparable<T>> {
 		return max; // returning maximum element
 	}
 
+	/**
+	 * @param <T>
+	 * @param inputArray : takes array of element
+	 * @param max : gives maximum value present in array
+	 */
 	public static <T> void printMaximum(T[] inputArray, T max) {
 
 		for (T element : inputArray)
